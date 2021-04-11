@@ -5,15 +5,11 @@ CHALLENGE 1 - Review
 
 Write a function named replaceZeros that, given a string, uses Regex to replace all '0' with the word 'zero'.
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 1', () => {
-//   test('It should replace all the 0\'s with the word "zero"', () => {
-//     expect(replaceZeros('301 is s0 much fun!')).toStrictEqual('3zero1 is szero much fun!');
-//   });
-// });
+
 const replaceZeros = (string) => {
   // Solution code here...
-  return string.replace(/0/g,'zero');
-
+  let o = string.replace(/0/g,'zero');
+  return o;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,14 +17,13 @@ CHALLENGE 2
 
 Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 2', () => {
-//   test('It should add one to all the numbers in the array', () => {
-//     expect(addOne([2, 3, 5, 11])).toStrictEqual([3, 4, 6, 12]);
-//   });
-// });
+
 const addOne = (arr) => {
   // Solution code here...
-  return arr.map((item) => item + 1);
+  let m = arr.map(function(it){
+    return it+1;
+  });
+  return m;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,15 +31,13 @@ CHALLENGE 3
 
 Write a function named addQuestion that, given an array of strings, uses map to return a new array containing each string followed by a question mark character.
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 3', () => {
-//   test('It should add a question mark to the end of each string', () => {
-//     expect(addQuestion(['hello', '301', 'students'])).toStrictEqual(['hello?', '301?', 'students?']);
-//   });
-// });
+
 const addQuestion = (arr) => {
   // Solution code here...
-  return arr.map((item) => `${item}?`);
-
+  let m = arr.map(function(it){
+    return `${it}?`;
+  });
+  return m;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,23 +49,16 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 4', () => {
-//   test('It should return two raised to the power of the integer', () => {
-//     expect(forLoopTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
-//     expect(forLoopTwoToThe([0, 4, 5]).length).toStrictEqual(3);
-//   });
 
-//   test('It should return decimals if the integer is negative', () => {
-//     expect(forLoopTwoToThe([-1, -2, -3])).toStrictEqual([0.5, 0.25, 0.125]);
-//   });
-// });
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
-  let newArr = [];
-  for(let item of arr){
-    newArr.push(Math.pow(2, item));
+  let ar = [];
+  for (let i =0; i<arr.length;i++){
+    // console.log(arr[i])
+    let p= Math.pow(2,arr[i]);
+    console.log(p);
+    ar.push(p);
   }
-  return newArr;
+  return ar;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,9 +77,14 @@ Write a function named forEachTwoToThe that produces the same output as your for
 // });
 const forEachTwoToThe = (arr) => {
   // Solution code here...
-  let newArr = [];
-  arr.forEach(item => newArr.push(Math.pow(2, item)));
-  return newArr;
+  let ar = [];
+  arr.forEach(function(it){
+    // console.log(it)
+    let u = Math.pow(2,it);
+    // console.log(u)/
+    ar.push(u);
+  });
+  return ar;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -101,20 +92,13 @@ CHALLENGE 6
 
 Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1 and your forEachTwoToThe function from challenge 2, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 6', () => {
-//   test('It should return two raised to the power of the integer', () => {
-//     expect(mapTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
-//     expect(mapTwoToThe([0, 4, 5]).length).toStrictEqual(3);
-//   });
 
-//   test('It should return decimals if the integer is negative', () => {
-//     expect(mapTwoToThe([-1, -2, -3])).toStrictEqual([0.5, 0.25, 0.125]);
-//   });
-// });
 const mapTwoToThe = (arr) => {
   // Solution code here...
-  return arr.map(item => Math.pow(2, item));
-
+  let m = arr.map(function(it){
+    return Math.pow(2,it);
+  });
+  return m;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,6 +113,11 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
+  let y = arr.map(function(it){
+    // console.log(it.charCodeAt(0))
+    return it.charCodeAt(0);
+  });
+  return y;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,6 +132,13 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   // Solution code here...
+  let n = arr.map(function(it){
+    // console.log(typeof it)
+    if (typeof it === 'string') {return 'N/A';}
+    if (it%2===0){return 'even';}
+    else if (it%2 !== 0){return 'odd';}
+  });
+  return n;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -189,6 +185,11 @@ const snorlaxAbilities = {
 
 const extractAbilities = (arr) => {
   // Solution code here...
+  let n = arr.map(function(it,i){
+  // console.log(it.abilities[i].ability.name)
+    return it.ability.name;
+  });
+  return n;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -236,6 +237,14 @@ const snorlaxStats = {
 
 const extractStats = (arr) => {
   // Solution code here...
+  let m = arr.map(function(it,i){
+    let s = {
+      name: it.stat.name,
+      total: it.effort+it.baseStat,
+    };
+    return s;
+  });
+  return m;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -300,14 +309,14 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return an array containing the character code for each letter', () => {
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([ 67, 111, 100, 101, 51, 48, 49 ]);
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return an array containing the keys from an object', () => {
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual([ 'odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd' ]);
     expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541]).length).toStrictEqual(8);
@@ -329,14 +338,14 @@ xdescribe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return an array containing only the ability names', () => {
     expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
     expect(extractAbilities(snorlaxAbilities.abilities).length).toStrictEqual(3);
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return an array containing objects with name and total values', () => {
     expect(extractStats(snorlaxStats.stats)).toStrictEqual([
       { name: 'speed', total: 35, },
