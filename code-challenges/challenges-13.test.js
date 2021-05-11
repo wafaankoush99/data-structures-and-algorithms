@@ -110,10 +110,17 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
-  let r =  arr.reduce(function(acc, it)
-  {acc && it.includes(':)');}
-  , true);
-  return r;
+  let n = arr.filter(it=>{
+    if (it.includes(':)')){
+      return it;
+    }
+  });
+  if (arr.length === n.length) {
+    return true;
+  }
+  else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
