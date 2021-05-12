@@ -193,30 +193,19 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   let winners = new Array();
-  winners.push(board[0]);
-  winners.push(board[1]);
-  winners.push(board[2]);
-  let it0 = [];
-  let it1 = [];
-  let it2 = [];
-  board.forEach(it=>{
-    it0.push(it[0]);
-    it1.push(it[1]);
-    it2.push(it[2]);
-  });
-  winners.push(it0);
-  winners.push(it1);
-  winners.push(it2);
-  let id0 = [];
-  id0.push(board[0][0]);
-  id0.push(board[1][1]);
-  id0.push(board[2][2]);
-  winners.push(id0);
-  let id1 = [];
-  id1.push(board[0][2]);
-  id1.push(board[1][1]);
-  id1.push(board[2][0]);
-  winners.push(id1);
+  board.forEach((rows)=> winners.push(rows) );
+  board.map((all,i1)=>{
+    let columns = board.map((cols,i)=>{ return board[i][i1]; });
+    winners.push(columns);});
+  let c = -1;
+  let dia = board.map(()=>{
+    c++;
+    return board[c][c];});
+  let si = board.length;
+  let dia2 = board.map(()=>{
+    c++; si--;
+    return board[c-board.length][si];});
+  winners.push(dia,dia2);
   let p = winners.filter((it,i)=>{
     if (winners[i][0] === winners[i][1] && winners[i][1] === winners[i][2] && winners[i][1] !== '')
       return it;
