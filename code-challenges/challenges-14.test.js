@@ -192,7 +192,7 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  let winners = new Array();
+   let winners = new Array();
 
   board.forEach((rows)=> winners.push(rows) );
 
@@ -214,9 +214,10 @@ const detectTicTacToeWin = (board) => {
   for (let i=0;i<winners.length;i++){
     if (new Set(winners[i]).size === 1) {
       for (let j=0;j<winners[i].length;j++){
-        if (winners[i][j] === '') return false;
-        console.log(winners[i]);
-        result.push(winners[i]);}}}
+        if (!(winners[i][j] === '')) {
+          result.push(winners[i])
+          };
+        ;}}}
 
   if (result.length > 0) return true;
   else if (result.length <= 0) return false;
