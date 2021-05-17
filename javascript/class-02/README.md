@@ -29,7 +29,11 @@ insertShiftArray([42,8,15,23,42], 16);
 ```
 
 The solution done by createing empty array and pushed 3 things to it :
+
 1- first half of the array
+
 2- The Value 
+
 3- second Half of the array
+
 and returned the new Array 
