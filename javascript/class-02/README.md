@@ -28,7 +28,7 @@ insertShiftArray([2,4,6,-8], 5);
 insertShiftArray([42,8,15,23,42], 16);
 ```
 
-The solution done by createing empty array and pushed 3 things to it :
+### The solution done by createing empty array and pushed 3 things to it respectively :
 
 1- first half of the array
 
