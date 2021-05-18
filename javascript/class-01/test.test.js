@@ -1,7 +1,15 @@
-
+/**
+ * return an array with elements in reversed order.
+ * @param {[]} arr array of numbers
+ * @returns {[]} reversed array
+ */
 let reverse = (arr) =>{
-  return arr.reverse();
-};
+  let newArr = [];
+  for (let i =arr.length-1; i>=0; i--){
+    console.log(i);
+    newArr.push(arr[i]);
+  }
+  return newArr;};
 
 describe('Testing challenge', () => {
   test('It should return reversed array', () => {
