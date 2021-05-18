@@ -1,11 +1,10 @@
-![shiftarray](https://user-images.githubusercontent.com/78326110/118579075-08782100-b796-11eb-925d-63d410b102cb.jpg)
 ## Shift Array Challenge 
 
 Takes an array then return it with the new value added at the middle index.
 
 ## [Board](https://miro.com/welcomeonboard/XV5WzC1LBoVeaKcpAqdW74ARdlK5T2f39vecqqVRRmLlVDEF0Pd5iaZcWm2xiRgu)
 
-![](./shiftarray.jpg)
+![shiftarray](https://user-images.githubusercontent.com/78326110/118579075-08782100-b796-11eb-925d-63d410b102cb.jpg)
 
 ## CODE :
 
