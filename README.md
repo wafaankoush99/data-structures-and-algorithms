@@ -18,4 +18,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | class      | Description |
 | ----------- | ----------- |
 | class-01      | [Reverse Array](./javascript/class-01) |
-| class-01   | [Shift Array](./javascript/class-02) |
+| class-02   | [Shift Array](./javascript/class-02) |
+| class-03   | [Binary Array](./javascript/class-03) |
