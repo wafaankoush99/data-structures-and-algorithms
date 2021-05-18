@@ -1,3 +1,12 @@
+/**
+ * This function Takes an array and return the index of the array’s
+ * element that is equal to the value of the search key,
+ *  or -1 if the element is not in the array.
+ * @param {array} arr => sorted array of numbers
+ * @param {number} key => search key
+ * @returns {number} => the index of the key
+ */
+
 function binarySearch(arr, key){
   let start = 0;
   let end = arr.length - 1;
