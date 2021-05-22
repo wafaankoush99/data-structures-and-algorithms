@@ -1,7 +1,7 @@
 'use strict';
 
 const Node = require('../node');
-const LinkedList = require('../linked-list');
+const LinkedList = require('../linkedList');
 const { expect } = require('@jest/globals');
 
 describe('Check Linked List Class', ()=>{
