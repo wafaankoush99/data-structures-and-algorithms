@@ -17,7 +17,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 | X     | Description |
 | ----------- | ----------- |
-| 1      | [Reverse Array](./javascript/class-01) |
-| 2   | [Shift Array](./javascript/class-02) |
-| 3   | [Binary Array](./javascript/class-03) |
+| 1      | [Reverse Array](./javascript/Array-Reverse) |
+| 2   | [Shift Array](./javascript/Shift-Array) |
+| 3   | [Binary Array](./javascript/Binary-Search-Array) |
 | 4 | [Linked List](./Data-Structures/linkedList) |
