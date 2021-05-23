@@ -155,6 +155,8 @@ set current to current.next
 
 ## API
 
+### Insert | Include | toString
+
 [Show Board on MERO](https://miro.com/welcomeonboard/hWMltNg2K7jA0YBOgTiBp5itbvCPnhNmYe4i0IIK5GnOK211bP7J5C9tRaJ8n9Ro)
 
 ##### [Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/37)
@@ -162,9 +164,12 @@ set current to current.next
 
 ![](api.jpg)
 
+### Append | Insert Before | Insert After
+
 [Show Board on MERO](https://miro.com/welcomeonboard/gUzOYvPx7tSNkMiN2R1k3KG8bLA6VbvdjZQcRt0X7VeyiFKT0P38kROhRpyplt3y)
 
 ##### [Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/43)
+
 ![](api2.jpg)
 
 
