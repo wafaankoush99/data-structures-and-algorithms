@@ -44,19 +44,17 @@ class LinkedList {
         return false;
       }
     }
-    catch(err){console.error('Does not Include a value', err);}
+    catch (err) { console.error('Does not Include a value', err); }
   }
 
 
 
-  // Define a method called toString
-  // which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
-  // "{ a } -> { b } -> { c } -> NULL"
+  // Define a method called toString which takes in no arguments and returns a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
 
   toString() {
     try {
       let string = '';
-      if (!(this.head)){
+      if (!(this.head)) {
         string = 'NULL';
         return string;
       }
@@ -71,9 +69,79 @@ class LinkedList {
       }
       return string;
     }
-    catch(err){ console.error('Error in toString()', err);}
+    catch (err) { console.error('Error in toString()', err); }
   }
 
+  // .append(value) which adds a new node with the given value to the end of the list
+
+  append(value) {
+    try {
+      let temp = new Node(value);
+      if (!this.head) {
+        this.head = temp;
+      }
+      else {
+        let current = this.head;
+        while (current.next) {
+          current = current.next;
+        }
+        current.next = temp;
+      }
+    }
+    catch (err) { console.error('Can not append', err); }
+  }
+
+
+  //.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+
+  insertBefore(newValue, value) {
+    try {
+      let temp = new Node(newValue);
+      let current = this.head;
+
+      if (current.value === value) {
+        temp.next = current;
+        this.head = temp;
+        return;
+      }
+
+      else {
+        while (current.next) {
+          if (current.next.value === value) {
+            temp.next = current.next;
+            current.next = temp;
+            break;
+          }
+
+          current = current.next;
+
+        }
+      }
+    }
+    catch (err) { console.error('Can not Insert Before', err); }
+
+  }
+
+
+  // insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+  insertAfter(newValue, value) {
+    try{
+      let current = this.head;
+      let temp = new Node(newValue);
+
+      while (current) {
+        if (current.value === value) {
+          temp.next = current.next;
+          current.next = temp;
+          break;
+        }
+        current = current.next;
+      }
+    }
+    catch (err) { console.error('Can not Insert After', err); }
+
+  }
 }
 
 module.exports = LinkedList;
