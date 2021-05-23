@@ -119,7 +119,6 @@ class LinkedList {
       }
     }
     catch (err) { console.error('Can not Insert Before', err); }
-
   }
 
 
@@ -140,7 +139,6 @@ class LinkedList {
       }
     }
     catch (err) { console.error('Can not Insert After', err); }
-
   }
 }
 
