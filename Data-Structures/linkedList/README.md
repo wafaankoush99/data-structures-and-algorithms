@@ -43,7 +43,7 @@ takes in no arguments and returns a string representing all the values in the Li
 which return a value from the end of a linked list at a specific position (k).
 
 *** 
-## ***Challenges ~***
+## ***Challenges*** ~
 
 ## ***Tests prove the following functionality:***
 
@@ -95,7 +95,7 @@ which return a value from the end of a linked list at a specific position (k).
 
 ***
 
-##  ***[Actions]()*** ~
+##  ***[Actions](https://github.com/wafaankoush99/data-structures-and-algorithms/actions)*** ~
 
 ![](./linkedListTest.png)
 
@@ -239,7 +239,7 @@ make the last node => next as the new node.
 
 [Show Board on MERO](https://miro.com/welcomeonboard/i2iJlf6Hq6SBdtxbjBFhoQdRKArgZp1ufRoDPhEEed1gnI3VAuc3uPGh9BFi26Mx)
 
-##### [Pull Request]()
+##### [Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/45)
 
 ![linked list 2](kthfromend.jpg)
 
