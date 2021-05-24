@@ -1,37 +1,53 @@
-# Singly Linked List
+# ***Singly Linked List***
 <!-- Short summary or background information -->
 
-## Created Node class that has properties for the value stored in the Node, and a pointer to the next Node. & Extend a Linked List to allow various insertion methods.
+## ***Created Node class that has properties for the value stored in the Node, and a pointer to the next Node. & Extend a Linked List to allow various insertion methods. And k-th value from the end of a linked list.***
+
+***
 
 
-&check;  LinkedList class, include a head property. and empty Linked List created.
+
+
+## ~ ***LinkedList class, include a head property. and empty Linked List created.*** ~
 
 &check;  **insert() method** 
+
 takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
 
-&check;  **includes() method** takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+&check;  **includes() method** 
+
+takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
 &check;  **toString() method** 
+
 takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
 
+***
+
 &check; **append(value) method**
+
  which adds a new node with the given value to the end of the list
 
  &check; **insertBefore(value, newVal) method**
+
   which add a new node with the given newValue immediately before the first value node
 
 &check; **insertAfter(value, newVal) method**
+
  which add a new node with the given newValue immediately after the first value node
 
+***
+&check; **kthFromEnd(k) method**
 
+which return a value from the end of a linked list at a specific position (k).
 
+*** 
+## ***Challenges ~***
 
+## ***Tests prove the following functionality:***
 
-
-## Challenge
-
-## Tests prove the following functionality:
+### Insert | Include | toString
 
 &check; Can successfully instantiate an empty linked list
 
@@ -47,6 +63,10 @@ takes in no arguments and returns a string representing all the values in the Li
 
 &check; Can properly return a collection of all the values that exist in the linked list
 
+***
+
+### Append | Insert Before | Insert After
+
 &check; Can successfully add a node to the end of the linked list
 
 &check; Can successfully add multiple nodes to the end of a linked list
@@ -59,14 +79,32 @@ takes in no arguments and returns a string representing all the values in the Li
 
 &check; Can successfully insert a node after the last node of the linked list
 
+***
+
+### kthFromEnd(k)
+
+ &check; Where k is greater than the length of the linked list
+
+ &check; Where k and the length of the list are the same
+
+ &check; Where k is not a positive integer
+
+ &check; Where the linked list is of a size 1
+
+ &check; where k is not at the end, but somewhere in the middle of the linked list
+
+***
+
+##  ***[Actions]()*** ~
+
 ![](./linkedListTest.png)
 
 ***
 
 
-## Approach & Efficiency
+## ***Approach & Efficiency*** :
 
-- ### insert(value)
+- ### ***insert(value)***
 
    - create a new instance of Node with the given value and assign it to the head if the linked list is empty.
 
@@ -78,7 +116,7 @@ Assign to this.head a reference to the new instance.
 
 
 
-- ### includes(value)
+- ### **includes(value)**
 
 Set the local variable current to the Node reference in this.head
 
@@ -91,7 +129,7 @@ Set current to current.next.
 return false.
 
 
-- ### toString()
+- ### **toString()**
 
 set local variable current to Node reference in this.head
 
@@ -103,7 +141,9 @@ add the current value to the string with concatenate
 
 set current to current.next
 
-- ### append()
+***
+
+- ### **append()**
 
 • Declare head pointer and make it as NULL.
 
@@ -114,17 +154,17 @@ set current to current.next
 
 • If the head node is NULL (Empty Linked List),
 
-         make the new node as the head.
+make the new node as the head.
 
 
 • If the head node is not null, (Linked list already has some elements),
 
-         find the last node.
+find the last node.
 
-         make the last node => next as the new node.
+make the last node => next as the new node.
 
 
-- ### insertBefore()
+- ### **insertBefore()**
 
 • Set the local variable current to the Node reference in this.head.
 
@@ -141,7 +181,7 @@ set current to current.next
 • set current to the next
 
 
-- ### insertAfter()
+- ### **insertAfter()**
 
 • Set the local variable current to the Node reference in this.head.
 
@@ -151,10 +191,28 @@ set current to current.next
 
 • set current to the current next
 
+***
+
+- ### **kthFromEnd(k)**
+
+• Add A size property to the linked list then increase this size every time you insert a new Node
+
+• in kthFromEnd method set a current node to the head
+
+• declare a variable 's' for example, that equal to size -1 to get indexes
+
+• if k equal 's' return the current Node
+
+• if k greater than 's' or less that zero , return exception
+
+• iterate over the linked List with decrease 's' value every time you iterate
+
+• Return (current.value) when k equal to value of 's'
+
 
 ***
 
-## API
+## ***API ~***
 
 ### Insert | Include | toString
 
@@ -165,6 +223,8 @@ set current to current.next
 
 ![](api.jpg)
 
+***
+
 ### Append | Insert Before | Insert After
 
 [Show Board on MERO](https://miro.com/welcomeonboard/gUzOYvPx7tSNkMiN2R1k3KG8bLA6VbvdjZQcRt0X7VeyiFKT0P38kROhRpyplt3y)
@@ -172,5 +232,15 @@ set current to current.next
 ##### [Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/43)
 
 ![linked list 2](https://user-images.githubusercontent.com/78326110/119351324-0851b700-bca9-11eb-85a8-0c9fca0adf2e.jpg)
+
+***
+
+### kthFromEnd(k)
+
+[Show Board on MERO](https://miro.com/welcomeonboard/i2iJlf6Hq6SBdtxbjBFhoQdRKArgZp1ufRoDPhEEed1gnI3VAuc3uPGh9BFi26Mx)
+
+##### [Pull Request]()
+
+![linked list 2](kthfromend.jpg)
 
 
