@@ -26,7 +26,8 @@ takes in no arguments and returns a string representing all the values in the Li
 
 
 
-***
+
+
 
 ## Challenge
 
@@ -170,6 +171,6 @@ set current to current.next
 
 ##### [Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/43)
 
-![](api2.jpg)
+![linked list 2](https://user-images.githubusercontent.com/78326110/119351324-0851b700-bca9-11eb-85a8-0c9fca0adf2e.jpg)
 
 
