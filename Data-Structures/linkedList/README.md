@@ -1,5 +1,4 @@
 # ***Singly Linked List***
-<!-- Short summary or background information -->
 
 ## ***Created Node class that has properties for the value stored in the Node, and a pointer to the next Node. & Extend a Linked List to allow various insertion methods. And k-th value from the end of a linked list.***
 
@@ -10,22 +9,22 @@
 
 ## ~ ***LinkedList class, include a head property. and empty Linked List created.*** ~
 
-```
+
 &check;  **insert() method** 
 
 takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
-```
+
 
 &check;  **includes() method** 
 
 takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
-```
+
 &check;  **toString() method** 
 
 takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
-```
+
 
 ***
 
@@ -33,11 +32,11 @@ takes in no arguments and returns a string representing all the values in the Li
 
  which adds a new node with the given value to the end of the list
 
-```
+
  &check; **insertBefore(value, newVal) method**
 
   which add a new node with the given newValue immediately before the first value node
-```
+
 
 &check; **insertAfter(value, newVal) method**
 
@@ -45,11 +44,11 @@ takes in no arguments and returns a string representing all the values in the Li
 
 ***
 
-```
+
 &check; **kthFromEnd(k) method**
 
 which return a value from the end of a linked list at a specific position (k).
-```
+
 *** 
 ## ***Challenges*** ~
 
@@ -72,7 +71,6 @@ which return a value from the end of a linked list at a specific position (k).
 &check; Can properly return a collection of all the values that exist in the linked list
 
 ***
-```
 ### Append | Insert Before | Insert After
 
 &check; Can successfully add a node to the end of the linked list
@@ -86,7 +84,6 @@ which return a value from the end of a linked list at a specific position (k).
 &check; Can successfully insert after a node in the middle of the linked list
 
 &check; Can successfully insert a node after the last node of the linked list
-```
 ***
 
 ### kthFromEnd(k)
@@ -111,7 +108,7 @@ which return a value from the end of a linked list at a specific position (k).
 
 
 ## ***Approach & Efficiency*** :
-```
+
 - ### ***insert(value)***
 
    - create a new instance of Node with the given value and assign it to the head if the linked list is empty.
@@ -123,7 +120,7 @@ Assign to this.head a reference to the new instance.
 
 
 
-```
+
 - ### **includes(value)**
 
 Set the local variable current to the Node reference in this.head
@@ -136,7 +133,6 @@ Set current to current.next.
 
 return false.
 
-```
 - ### **toString()**
 
 set local variable current to Node reference in this.head
@@ -148,7 +144,7 @@ while current is nort NULL
 add the current value to the string with concatenate
 
 set current to current.next
-```
+
 ***
 
 - ### **append()**
@@ -171,7 +167,7 @@ find the last node.
 
 make the last node => next as the new node.
 
-```
+
 - ### **insertBefore()**
 
 • Set the local variable current to the Node reference in this.head.
@@ -187,8 +183,6 @@ make the last node => next as the new node.
 • using while set the newNode to the current if the current value equal the value
 
 • set current to the next
-```
-
 - ### **insertAfter()**
 
 • Set the local variable current to the Node reference in this.head.
@@ -200,7 +194,6 @@ make the last node => next as the new node.
 • set current to the current next
 
 ***
-```
 - ### **kthFromEnd(k)**
 
 • Add A size property to the linked list then increase this size every time you insert a new Node
@@ -217,7 +210,6 @@ make the last node => next as the new node.
 
 • Return (current.value) when k equal to value of 's'
 
-```
 ***
 
 ## ***API*** ~
