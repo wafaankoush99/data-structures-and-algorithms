@@ -149,4 +149,50 @@ describe('Check Linked List Class', () => {
 
   });
 
+  // Where k is greater than the length of the linked list
+  // Where k and the length of the list are the same
+  // Where k is not a positive integer
+  // Where the linked list is of a size 1
+  // “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+
+  it('Where k is greater than the length of the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    linkedList.insert(4);
+    linkedList.insert(7);
+    expect(linkedList.kthFromEnd(8)).toEqual('exception');
+  });
+
+  it('Where k and the length of the list are the same', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    linkedList.insert(4);
+    linkedList.insert(7);
+    expect(linkedList.kthFromEnd(3)).toEqual('exception');
+  });
+
+  it('Where k is not a positive integer', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    linkedList.insert(4);
+    linkedList.insert(7);
+    expect(linkedList.kthFromEnd(-3)).toEqual('exception');
+  });
+
+  it('Where the linked list is of a size 1', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    expect(linkedList.kthFromEnd(0)).toEqual(2);
+    expect(linkedList.kthFromEnd(1)).toEqual('exception');
+  });
+
+  it('where k is not at the end, but somewhere in the middle of the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    linkedList.insert(4);
+    linkedList.insert(7);
+    expect(linkedList.kthFromEnd(1)).toEqual(4);
+  });
+
+
 });
