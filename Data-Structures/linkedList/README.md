@@ -50,6 +50,13 @@ takes in no arguments and returns a string representing all the values in the Li
 which return a value from the end of a linked list at a specific position (k).
 
 *** 
+
+&check; **zipLists(ll1,ll2) method**
+
+Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+***
+
 ## ***Challenges*** ~
 
 ## ***Tests prove the following functionality:***
@@ -99,10 +106,18 @@ which return a value from the end of a linked list at a specific position (k).
  &check; where k is not at the end, but somewhere in the middle of the linked list
 
 ***
+### zipLists(ll1,ll2) 
+
+ &check; Zip second linked list into first if the second is longer than the first
+
+ &check; Zip second linked list into first if the first is longer than the second
+
+
+***
 
 ##  ***[Actions](https://github.com/wafaankoush99/data-structures-and-algorithms/actions)*** ~
 
-![](./linkedListTest.png)
+![](./tests.png)
 
 ***
 
@@ -211,6 +226,31 @@ make the last node => next as the new node.
 • Return (current.value) when k equal to value of 's'
 
 ***
+- ### zipLists(ll1,ll2) 
+
+• create a new linked list .
+
+• create a new function called ziplist that have 2 paramameters
+
+• inside the function define the current for the first linked list
+
+and 
+
+define a second one for the second  linked list.
+
+• while current1 or current2 are not null 
+
+• if the current for the first is not null 
+
+append it to new linked list and move to the next node
+
+• if the current for the second is not null
+
+ append it to new linked list and move to the next node
+
+• return the zipped list
+
+***
 
 ## ***API*** ~
 
@@ -242,5 +282,14 @@ make the last node => next as the new node.
 ##### [Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/45)
 
 ![linked list 2](kthfromend.jpg)
+***
+
+### zipLists(ll1, ll2)
+
+[Show Board on MERO](https://miro.com/welcomeonboard/GcqHiSH1UqzFNCH2anc8Y2vifcLvR6qc4cl9EPXsyC0vQ60qg1LMYXhe2zeOPC5r)
+
+##### [Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/46)
+
+![linked list 2](ziplist.jpg)
 
 
