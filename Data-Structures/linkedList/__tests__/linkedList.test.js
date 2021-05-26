@@ -2,6 +2,7 @@
 
 const Node = require('../node');
 const LinkedList = require('../linkedList');
+const zipLists = require('../zipList');
 const { expect } = require('@jest/globals');
 
 describe('Check Linked List Class', () => {
@@ -194,5 +195,40 @@ describe('Check Linked List Class', () => {
     expect(linkedList.kthFromEnd(1)).toEqual(4);
   });
 
+  // zipLinked list
 
+  it ('Zip second linked list into first if the second is longer than the first',()=>{
+
+    let ll1 = new LinkedList ();
+    ll1.insert (100);
+    ll1.insert (200);
+
+    let ll2 = new LinkedList ();
+    ll2.insert (400);
+    ll2.insert (600);
+    ll2.insert (300);
+    let result = zipLists (ll1 , ll2);
+    expect (result.head.value).toBe (200);
+    expect (result.head.next.value).toBe (300);
+    expect (result.head.next.next.value).toBe (100);
+    expect (result.head.next.next.next.value).toBe (600);
+  });
+
+
+  it ('Zip second linked list into first if the first is longer than the second',()=>{
+
+    let ll1 = new LinkedList ();
+    ll1.insert (500);
+    ll1.insert (300);
+    ll1.insert (400);
+
+    let ll2 = new LinkedList ();
+    ll2.insert (100);
+    ll2.insert (200);
+    let result = zipLists (ll1 , ll2);
+    expect (result.head.value).toBe (400);
+    expect (result.head.next.value).toBe (200);
+    expect (result.head.next.next.value).toBe (300);
+    expect (result.head.next.next.next.value).toBe (100);
+  });
 });
