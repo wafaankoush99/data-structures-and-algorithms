@@ -117,7 +117,10 @@ Zip the two linked lists together into one so that the nodes alternate between t
 
 ##  ***[Actions](https://github.com/wafaankoush99/data-structures-and-algorithms/actions)*** ~
 
-![](./tests.png)
+![modtest](https://user-images.githubusercontent.com/78326110/119901881-26404580-bf4f-11eb-9118-593953d62668.png)
+
+![mod2test](https://user-images.githubusercontent.com/78326110/119901893-2b04f980-bf4f-11eb-87a2-3cd273ceb0d4.png)
+
 
 ***
 
