@@ -79,45 +79,52 @@ class LinkedList {
 
   append(value) {
     try {
-      let temp = new Node(value);
-      if (!this.head) {
-        this.head = temp;
-      }
-      else {
-        let current = this.head;
-        while (current.next) {
-          current = current.next;
+      if (typeof value === 'string' || typeof value === 'number') {
+        let temp = new Node(value);
+        console.log(typeof value);
+        if (!this.head) {
+          this.head = temp;
         }
-        current.next = temp;
+        else {
+          let current = this.head;
+          while (current.next) {
+            current = current.next;
+          }
+          current.next = temp;
+
+        }
       }
     }
     catch (err) { console.error('Can not append', err); }
   }
 
 
+
   //.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
 
   insertBefore(newValue, value) {
     try {
-      let temp = new Node(newValue);
-      let current = this.head;
+      if (typeof newValue === 'string' || typeof newValue === 'number') {
 
-      if (current.value === value) {
-        temp.next = current;
-        this.head = temp;
-        return;
-      }
+        let temp = new Node(newValue);
+        let current = this.head;
 
-      else {
-        while (current.next) {
-          if (current.next.value === value) {
-            temp.next = current.next;
-            current.next = temp;
-            break;
+        if (current.value === value) {
+          temp.next = current;
+          this.head = temp;
+          return;
+        }
+        else {
+          while (current.next) {
+            if (current.next.value === value) {
+              temp.next = current.next;
+              current.next = temp;
+              break;
+            }
+
+            current = current.next;
+
           }
-
-          current = current.next;
-
         }
       }
     }
@@ -129,20 +136,30 @@ class LinkedList {
 
   insertAfter(newValue, value) {
     try {
+
+      if (typeof newValue === 'string' || typeof newValue === 'number') {
+=======
       let current = this.head;
       let temp = new Node(newValue);
 
-      while (current) {
-        if (current.value === value) {
-          temp.next = current.next;
-          current.next = temp;
-          break;
+
+        let current = this.head;
+        let temp = new Node(newValue);
+
+        while (current) {
+          if (current.value === value) {
+            temp.next = current.next;
+            current.next = temp;
+            break;
+          }
+          current = current.next;
         }
-        current = current.next;
       }
     }
     catch (err) { console.error('Can not Insert After', err); }
   }
+
+
 
   // Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
@@ -167,6 +184,7 @@ class LinkedList {
     catch (err) { console.error('Can not Return Node Value', err); }
 
   }
+
 }
 
 

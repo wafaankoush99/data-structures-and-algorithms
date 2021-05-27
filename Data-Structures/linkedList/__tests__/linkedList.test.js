@@ -81,6 +81,19 @@ describe('Check Linked List Class', () => {
     expect(linkedList.head.next.value).toEqual(appendedValue);
 
   });
+
+  it('test edge case in append method', () => {
+    let linkedList = new LinkedList();
+
+    linkedList.insert(2);
+    let appendedValue = [];
+    linkedList.append(appendedValue);
+    console.log(linkedList.head.value);
+    // console.log(linkedList.head.next.value);
+    expect(linkedList.head.next).toBeNull();
+
+  });
+
   it('Can successfully add multiple nodes to the end of a linked list', () => {
     let linkedList = new LinkedList();
 
@@ -109,13 +122,30 @@ describe('Check Linked List Class', () => {
 
   });
 
+  it('test edge case in insertBefore method', () => {
+    let linkedList = new LinkedList();
+
+    linkedList.insert(2);
+    linkedList.insert(5);
+    linkedList.insert(4);
+    //4 5 2
+    // adding one parameter (edge case)
+    linkedList.insertBefore(5);
+    // add value which is not string or number
+    linkedList.insertBefore([],5);
+    // value does not exist
+    linkedList.insertBefore(7,8);
+    expect(linkedList.toString()).toEqual('{ 4 } -> { 5 } -> { 2 } -> NULL');
+
+  });
+
   it('Can successfully insert a node before the first node of a linked list', () => {
     let linkedList = new LinkedList();
     let firstNode = 5;
     let newValue = 9;
     linkedList.insert(firstNode);
     // 9 5
-    linkedList.insertBefore(newValue,firstNode);
+    linkedList.insertBefore(newValue, firstNode);
 
     expect(linkedList.head.value).toEqual(newValue);
     expect(linkedList.head.next.value).toEqual(firstNode);
@@ -147,6 +177,22 @@ describe('Check Linked List Class', () => {
     expect(linkedList.head.next.value).toEqual(4);
     expect(linkedList.head.next.next.value).toEqual(2);
     expect(linkedList.head.next.next.next.value).toEqual(newValue);
+
+  });
+  it('test edge case in insertAfter method', () => {
+    let linkedList = new LinkedList();
+
+    linkedList.insert(2);
+    linkedList.insert(5);
+    linkedList.insert(4);
+    //4 5 2
+    // adding one parameter (edge case)
+    linkedList.insertAfter(5);
+    // add value which is not string or number
+    linkedList.insertAfter([],5);
+    // value does not exist
+    linkedList.insertAfter(7,8);
+    expect(linkedList.toString()).toEqual('{ 4 } -> { 5 } -> { 2 } -> NULL');
 
   });
 
