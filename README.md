@@ -15,9 +15,12 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
 
-| X     | Description |
+| x     | Description |
 | ----------- | ----------- |
 | 1      | [Reverse Array](./javascript/Array-Reverse) |
 | 2   | [Shift Array](./javascript/Shift-Array) |
 | 3   | [Binary Array](./javascript/Binary-Search-Array) |
-| 4 | [Linked List](./Data-Structures/linkedList) |
+
+| x     | Data Srtuctures |
+| ----------- | ----------- |
+| 1 | [Linked List](./Data-Structures/linkedList) |

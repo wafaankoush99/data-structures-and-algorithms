@@ -2,6 +2,7 @@
 
 const Node = require('../node');
 const LinkedList = require('../linkedList');
+const zipLists = require('../zipList');
 const { expect } = require('@jest/globals');
 
 describe('Check Linked List Class', () => {
@@ -195,4 +196,85 @@ describe('Check Linked List Class', () => {
 
   });
 
+  // Where k is greater than the length of the linked list
+  // Where k and the length of the list are the same
+  // Where k is not a positive integer
+  // Where the linked list is of a size 1
+  // “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+
+  it('Where k is greater than the length of the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    linkedList.insert(4);
+    linkedList.insert(7);
+    expect(linkedList.kthFromEnd(8)).toEqual('exception');
+  });
+
+  it('Where k and the length of the list are the same', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    linkedList.insert(4);
+    linkedList.insert(7);
+    expect(linkedList.kthFromEnd(3)).toEqual('exception');
+  });
+
+  it('Where k is not a positive integer', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    linkedList.insert(4);
+    linkedList.insert(7);
+    expect(linkedList.kthFromEnd(-3)).toEqual('exception');
+  });
+
+  it('Where the linked list is of a size 1', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    expect(linkedList.kthFromEnd(0)).toEqual(2);
+    expect(linkedList.kthFromEnd(1)).toEqual('exception');
+  });
+
+  it('where k is not at the end, but somewhere in the middle of the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(2);
+    linkedList.insert(4);
+    linkedList.insert(7);
+    expect(linkedList.kthFromEnd(1)).toEqual(4);
+  });
+
+  // zipLinked list
+
+  it ('Zip second linked list into first if the second is longer than the first',()=>{
+
+    let ll1 = new LinkedList ();
+    ll1.insert (100);
+    ll1.insert (200);
+
+    let ll2 = new LinkedList ();
+    ll2.insert (400);
+    ll2.insert (600);
+    ll2.insert (300);
+    let result = zipLists (ll1 , ll2);
+    expect (result.head.value).toBe (200);
+    expect (result.head.next.value).toBe (300);
+    expect (result.head.next.next.value).toBe (100);
+    expect (result.head.next.next.next.value).toBe (600);
+  });
+
+
+  it ('Zip second linked list into first if the first is longer than the second',()=>{
+
+    let ll1 = new LinkedList ();
+    ll1.insert (500);
+    ll1.insert (300);
+    ll1.insert (400);
+
+    let ll2 = new LinkedList ();
+    ll2.insert (100);
+    ll2.insert (200);
+    let result = zipLists (ll1 , ll2);
+    expect (result.head.value).toBe (400);
+    expect (result.head.next.value).toBe (200);
+    expect (result.head.next.next.value).toBe (300);
+    expect (result.head.next.next.next.value).toBe (100);
+  });
 });
