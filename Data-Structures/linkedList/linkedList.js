@@ -138,10 +138,6 @@ class LinkedList {
     try {
 
       if (typeof newValue === 'string' || typeof newValue === 'number') {
-=======
-      let current = this.head;
-      let temp = new Node(newValue);
-
 
         let current = this.head;
         let temp = new Node(newValue);
