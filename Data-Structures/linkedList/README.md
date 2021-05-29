@@ -293,6 +293,6 @@ append it to new linked list and move to the next node
 
 ##### [Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/46)
 
-![linked list 2](ziplist.jpg)
+![linked list 2](zipllist.jpg)
 
 
