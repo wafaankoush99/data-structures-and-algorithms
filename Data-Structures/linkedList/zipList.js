@@ -2,21 +2,46 @@
 const LinkedList = require('../linkedList/linkedList');
 
 
-function zipLists(ll1, ll2) {
-  let link = new LinkedList ();
-  let temp1 = ll1.head;
-  let temp2 = ll2.head;
-  while (temp1 || temp2){
-    if (temp1) {
-      link.append(temp1.value);
-      temp1 = temp1.next;
-    }
-    if (temp2){
-      link.append (temp2.value);
-      temp2 = temp2.next;
-    }
-  }
-  return link;
-}
+function zipList(list1, list2) {
 
-module.exports = zipLists;
+  let current1 = list1.head;
+  let current2 = list2.head;
+
+  while (current1.next !== null && current2.next !== null) {
+    let temp1 = current1.next;
+    let temp2 = current2.next;
+
+    current1.next = current2;
+    current2.next = temp1;
+
+    current1 = temp1;
+    current2 = temp2;
+
+  }
+
+  if (current1.next === null && current2 !== null) {
+    current1.next = current2;
+  }
+
+  // if (current2.next === null && current1 !== null) {
+  //   current2.next = current1;
+  // }
+
+
+  // list2.length > list1
+  if (current1.next === null && current2.next !== null ) {
+    current2.next = current1;
+  }
+
+  // list1.length > list2
+  if (current2.next === null && current1.next !== null) {
+    current1.next = current2;
+    // current1.next;
+    // console.log(current1.next)
+    current2 = current1.next;
+  }
+
+  return list1;
+
+}
+module.exports = zipList;
