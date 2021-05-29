@@ -24,3 +24,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | x     | Data Srtuctures |
 | ----------- | ----------- |
 | 1 | [Linked List](./Data-Structures/linkedList) |
+| 2 | [Stacks & Queues](./Data-Structures/stacksAndQueues) |
