@@ -58,7 +58,8 @@ Tests:       5 passed, 5 total
 
 ## [Board](https://miro.com/welcomeonboard/JGxIOmWAlMwH5RnG7tYz7cKHLbnB0Dap3Z4wsAb0OiR3lw0LALxUHhJdOSh7kQHO)
 
-![Untitled (8)](https://user-images.githubusercontent.com/78326110/120112548-faa3a200-c17e-11eb-8146-76ab4eff7a37.jpg)
+![PseudoQueue](https://user-images.githubusercontent.com/78326110/120113509-7bfd3380-c183-11eb-829d-6a65dfcc38e2.jpg)
+
 
 
 ***
