@@ -114,7 +114,7 @@ describe('Queue', () => {
     let deq2 = queue.dequeue();
     expect(deq1).toBe('S');
     expect(deq2).toBe('R');
-    expect(queue.isEmpty()).toBeTruthy;
+    expect(queue.isEmpty).toBeTruthy;
   });
 
   it('Calling dequeue on empty queue raises exception', () => {
