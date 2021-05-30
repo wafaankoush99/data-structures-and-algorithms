@@ -7,10 +7,9 @@
  which inserts value into the PseudoQueue, using a first-in, first-out approach.
 
 ```
-************************************************************************************************
    • create a method called enqueue that accept 1 parameters for value
    • push this value to stack1
-************************************************************************************************
+
 ```
 
 **dequeue()**
@@ -18,14 +17,14 @@
  which extracts a value from the PseudoQueue, using a first-in, first-out approach.
 
 ```
-************************************************************************************************
+
    • create a method called dequeue
    • if the stack one is empty throw an error
    • iterate over stack1 and push every value to the second stack in the PseudoQueue
    • declare the popped value in a variable
    • then iterate over the second stack to return its values to the first stack without popped value
    • return popped value
-************************************************************************************************
+
 
 ```
 
