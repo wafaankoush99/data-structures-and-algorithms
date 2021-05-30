@@ -7,6 +7,10 @@
  which inserts value into the PseudoQueue, using a first-in, first-out approach.
 
 ```
+************************************************************************************************
+   • create a method called enqueue that accept 1 parameters for value
+   • push this value to stack1
+************************************************************************************************
 ```
 
 **dequeue()**
@@ -14,6 +18,15 @@
  which extracts a value from the PseudoQueue, using a first-in, first-out approach.
 
 ```
+************************************************************************************************
+   • create a method called dequeue
+   • if the stack one is empty throw an error
+   • iterate over stack1 and push every value to the second stack in the PseudoQueue
+   • declare the popped value in a variable
+   • then iterate over the second stack to return its values to the first stack without popped value
+   • return popped value
+************************************************************************************************
+
 ```
 
 ## Tests ~
@@ -44,13 +57,14 @@ Tests:       5 passed, 5 total
 ***
 
 
-## [Board]()
+## [Board](https://miro.com/welcomeonboard/JGxIOmWAlMwH5RnG7tYz7cKHLbnB0Dap3Z4wsAb0OiR3lw0LALxUHhJdOSh7kQHO)
 
-![]()
+![Untitled (8)](https://user-images.githubusercontent.com/78326110/120112548-faa3a200-c17e-11eb-8146-76ab4eff7a37.jpg)
+
 
 ***
 
-[Pull Request]()
+[Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/50)
 
 
 
