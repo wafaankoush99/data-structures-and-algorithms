@@ -26,5 +26,6 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | 1 | [Linked List](./Data-Structures/linkedList) |
 | 2 | [Stacks & Queues](./Data-Structures/stacksAndQueues) |
 | 3 | [Stacks With Queue](./Data-Structures/queueWithStacks) |
+| 4 | [FIFO Animal Shelter](./Data-Structures/fifoAnimalShelter) |
 
 
