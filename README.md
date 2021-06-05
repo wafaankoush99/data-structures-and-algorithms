@@ -28,6 +28,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | 3 | [Stacks With Queue](./Data-Structures/queueWithStacks) |
 | 4 | [FIFO Animal Shelter](./Data-Structures/fifoAnimalShelter) |
 | 5 | [Multi Brackets Valifation](./Data-Structures/multiBracketValidation) |
+| 5 | [Tree](./Data-Structures/tree) |
 
 
 
