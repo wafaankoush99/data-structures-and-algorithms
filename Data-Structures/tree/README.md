@@ -56,6 +56,25 @@ Define a method for each of the depth first traversals called  postOrder which r
 
 
 ```
+**findMaximumValue()**
+
+Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+```
+
+- if tree not empty
+- set a max variable and give it root value
+- create a traverse function
+- if left exisit traverse on it and the same for the right node
+- if node vale greater than the root value (max)
+- set max equal to it
+- traverse on this.root and return the maximum value
+- throw error if the tree was empty
+
+
+
+
+```
 
 ## Binary Search Tree : 
 
@@ -112,30 +131,33 @@ Define a method named contains that accepts a value, and returns a boolean indic
 ## [Actions](https://github.com/wafaankoush99/data-structures-and-algorithms/actions)
 
 ```
- PASS  Data-Structures/tree/tree.test.js (15.438 s)
+ PASS  Data-Structures/tree/tree.test.js
   Binary Tree TEST
     ✓ Can successfully instantiate an empty tree (1 ms)
     ✓ Can successfully instantiate a tree with a single root node
     ✓ Can successfully return a collection from a preorder traversal (1 ms)
-    ✓ Can successfully return a collection from an inorder traversal (2 ms)
-    ✓ Can successfully return a collection from a postorder traversal (1 ms)
+    ✓ Can successfully return a collection from an inorder traversal
+    ✓ Can successfully return a collection from a postorder traversal (106 ms)
+    ✓ should successfully return maximum value of the tree (1 ms)
   Binary Search Tree TEST
-    ✓ Can successfully add a left child and right child to a single root node (1 ms)
+    ✓ Can successfully add a left child and right child to a single root node (2 ms)
     ✓ Should returns a boolean indicating whether or not the value is in the tree at least once. (1 ms)
   Edge Cases And Expected Faller
-    ✓ Should through an error when add a non numerical value to add method (46 ms)
+    ✓ Should through an error when add a non numerical value to add method (9 ms)
     ✓ Should through an error when add a non numerical value to contains method (1 ms)
+    ✓ Should return an error when find max value of empty tree
 
-----------|---------|----------|---------|---------|---------------------
+----------|---------|----------|---------|---------|----------------------
 File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
-----------|---------|----------|---------|---------|---------------------
-All files |   79.41 |    68.42 |     100 |   77.42 |
- tree.js  |   79.41 |    68.42 |     100 |   77.42 | 27,42,58,85,105-121
-----------|---------|----------|---------|---------|---------------------
+----------|---------|----------|---------|---------|----------------------
+All files |    82.5 |    73.91 |     100 |   80.28 |
+ tree.js  |    82.5 |    73.91 |     100 |   80.28 | 29,44,60,126,146-162
+----------|---------|----------|---------|---------|----------------------
 Test Suites: 1 passed, 1 total
-Tests:       9 passed, 9 total
+Tests:       11 passed, 11 total
 Snapshots:   0 total
-Time:        38.251 s
+Time:        1.084 s
+Ran all test suites matching /tree.test.js/i.
 
 ```
 
