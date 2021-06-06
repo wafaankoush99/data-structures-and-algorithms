@@ -1,5 +1,7 @@
 'use strict';
 
+var treeify = require('treeify');
+
 class Node {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -58,8 +60,47 @@ class BinaryTree {
     catch (err) { console.error('Error in postOrder method', err); }
 
   }
-}
 
+  findMaximumValue() {
+    if (this.root){
+      let max = this.root.value;
+      function traverse(node) {
+        if (node.left) { traverse(node.left); }
+        if (node.right) { traverse(node.right); }
+        if (node.value > max) { max = node.value; }
+      }
+      traverse(this.root);
+      return max;
+
+    }
+    else throw new Error ('Exception : Empty Tree !!!');
+
+  }
+}
+// let tree = null;
+// let one = new Node(1);
+// let two = new Node(2);
+// let three = new Node(3);
+// let four = new Node(4);
+// let five = new Node(5);
+// let six = new Node(6);
+// let seven = new Node(7);
+// let eight = new Node(10);
+// let nine = new Node(9);
+
+// one.left = two;
+// one.right = three;
+// two.left = six;
+// six.right = seven;
+// seven.left = eight;
+// seven.right = nine;
+// three.left = four;
+// three.right = five;
+
+// tree = new BinaryTree(one);
+// console.log(treeify.asTree(tree, true));
+
+// console.log(tree.findMaximumValue());
 
 class BinarySearchTree {
   constructor(root = null) {

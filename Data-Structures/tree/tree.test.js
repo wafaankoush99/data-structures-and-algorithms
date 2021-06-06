@@ -59,6 +59,11 @@ describe('Binary Tree TEST', () => {
     let postOrderResult = tree.postOrder();
     expect(postOrderResult).toEqual(expected);
   });
+
+
+  it('should successfully return maximum value of the tree', ()=>{
+    expect(tree.findMaximumValue()).toEqual(9);
+  });
 });
 
 describe('Binary Search Tree TEST', () => {
@@ -101,6 +106,11 @@ describe('Edge Cases And Expected Faller', () => {
     expect(()=>meTree.contains('String')).toThrow('The Value Should Be A Number');
   });
 
+  it('Should return an error when find max value of empty tree', ()=>{
+    const tree = new BinaryTree();
+    expect(() => tree.findMaximumValue()).toThrowError;
+    expect(() => tree.findMaximumValue()).toThrow('Exception : Empty Tree !!!');
+  });
 
 });
 
