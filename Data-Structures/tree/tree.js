@@ -1,6 +1,6 @@
 'use strict';
 
-let treeify = require('treeify');
+// let treeify = require('treeify');
 
 let { Queue } = require('../stacksAndQueues/stacks-and-queues');
 
