@@ -61,8 +61,35 @@ describe('Binary Tree TEST', () => {
   });
 
 
-  it('should successfully return maximum value of the tree', ()=>{
+  it('should successfully return maximum value of the tree', () => {
     expect(tree.findMaximumValue()).toEqual(9);
+  });
+
+  it('Should return a list of the values in the tree in the order they were encountered.', () => {
+    let tree = null;
+    let two = new Node(2);
+    let two2 = new Node(2);
+    let four = new Node(4);
+    let five1 = new Node(5);
+    let five2 = new Node(5);
+    let six = new Node(6);
+    let seven = new Node(7);
+    let nine = new Node(9);
+    let eleven = new Node(11);
+
+    two.left = seven;
+    seven.left = two2;
+    seven.right = six;
+    six.left = five1;
+    six.right = eleven;
+    two.right = five2;
+    five2.right = nine;
+    nine.left = four;
+
+    tree = new BinaryTree(two);
+    let expected = [2, 7, 5, 2, 6, 9, 5, 11, 4];
+    expect(tree.breadthFirst()).toEqual(expected);
+
   });
 });
 
@@ -96,20 +123,26 @@ describe('Binary Search Tree TEST', () => {
 describe('Edge Cases And Expected Faller', () => {
   it('Should through an error when add a non numerical value to add method', () => {
     let meTree = new BinarySearchTree();
-    expect(()=>meTree.add('String')).toThrow('The Value Should Be A Number');
+    expect(() => meTree.add('String')).toThrow('The Value Should Be A Number');
   });
   it('Should through an error when add a non numerical value to contains method', () => {
     let meTree = new BinarySearchTree();
     meTree.add(400);
     meTree.add(500);
     meTree.add(270);
-    expect(()=>meTree.contains('String')).toThrow('The Value Should Be A Number');
+    expect(() => meTree.contains('String')).toThrow('The Value Should Be A Number');
   });
 
-  it('Should return an error when find max value of empty tree', ()=>{
+  it('Should return an error when find max value of empty tree', () => {
     const tree = new BinaryTree();
     expect(() => tree.findMaximumValue()).toThrowError;
     expect(() => tree.findMaximumValue()).toThrow('Exception : Empty Tree !!!');
+  });
+
+  it('Should throw an error on breadthFirst method when call in empty tree', () => {
+    const tree = new BinaryTree();
+    expect(() => tree.breadthFirst()).toThrowError;
+    expect(() => tree.breadthFirst()).toThrow('Exception : Empty Tree !!!');
   });
 
 });
