@@ -76,6 +76,30 @@ Write an instance method called find-maximum-value. Without utilizing any of the
 
 ```
 
+**breadthFirst()**
+
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+
+```
+
+- if the tree not empty
+- declare empty array for result
+- set a new queue to the queue after require it
+- enqueue the root of tree to the queue
+- now that we have one node in our queue, we can dequeue it
+- From our dequeued first node, we can enqueue the left and right
+- repeat the process
+- Dequeue the temp node, enqueue that node’s left and right nodes, and move to the next new temp of the queue.
+- return the result
+- throw an error when tree is empty
+
+
+
+```
+
+
+
 ## Binary Search Tree : 
 
 **add(value)**
@@ -131,33 +155,36 @@ Define a method named contains that accepts a value, and returns a boolean indic
 ## [Actions](https://github.com/wafaankoush99/data-structures-and-algorithms/actions)
 
 ```
- PASS  Data-Structures/tree/tree.test.js
-  Binary Tree TEST
-    ✓ Can successfully instantiate an empty tree (1 ms)
-    ✓ Can successfully instantiate a tree with a single root node
-    ✓ Can successfully return a collection from a preorder traversal (1 ms)
-    ✓ Can successfully return a collection from an inorder traversal
-    ✓ Can successfully return a collection from a postorder traversal (106 ms)
-    ✓ should successfully return maximum value of the tree (1 ms)
-  Binary Search Tree TEST
-    ✓ Can successfully add a left child and right child to a single root node (2 ms)
-    ✓ Should returns a boolean indicating whether or not the value is in the tree at least once. (1 ms)
-  Edge Cases And Expected Faller
-    ✓ Should through an error when add a non numerical value to add method (9 ms)
-    ✓ Should through an error when add a non numerical value to contains method (1 ms)
-    ✓ Should return an error when find max value of empty tree
+ PASS  Data-Structures/stacksAndQueues/stacks-and-queue.test.js
+  Stacks
+    ✓ Can successfully push onto a stack (2 ms)
+    ✓ Can successfully push multiple values onto a stack (1 ms)
+    ✓ Can successfully pop off the stack
+    ✓ Can successfully empty a stack after multiple pops
+    ✓ Should raise exception when called "POP" on empty stack (7 ms)
+    ✓ Can successfully peek the next item on the stack
+    ✓ Should raise exception when called "PEEK" on empty stack (1 ms)
+    ✓ Can successfully instantiate an empty stack
+  Queue
+    ✓ Can successfully instantiate an empty queue
+    ✓ Can successfully enqueue into a queue (1 ms)
+    ✓ Can successfully enqueue multiple values into a queue (7 ms)
+    ✓ Can successfully peek into a queue, seeing the expected value (1 ms)
+    ✓ Can successfully dequeue out of a queue the expected value
+    ✓ Calling peek on empty queue raises exception (1 ms)
+    ✓ Can successfully empty a queue after multiple dequeues (1 ms)
+    ✓ Calling dequeue on empty queue raises exception
 
-----------|---------|----------|---------|---------|----------------------
-File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
-----------|---------|----------|---------|---------|----------------------
-All files |    82.5 |    73.91 |     100 |   80.28 |
- tree.js  |    82.5 |    73.91 |     100 |   80.28 | 29,44,60,126,146-162
-----------|---------|----------|---------|---------|----------------------
+----------------------|---------|----------|---------|---------|-------------------
+File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+----------------------|---------|----------|---------|---------|-------------------
+All files             |     100 |    90.91 |     100 |     100 |
+ stacks-and-queues.js |     100 |    90.91 |     100 |     100 | 82,163
+----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
-Tests:       11 passed, 11 total
+Tests:       16 passed, 16 total
 Snapshots:   0 total
-Time:        1.084 s
-Ran all test suites matching /tree.test.js/i.
+Time:        0.986 s, estimated 1 s
 
 ```
 
@@ -168,7 +195,8 @@ Ran all test suites matching /tree.test.js/i.
 
 ## Binay Tree ~
 
-![](./binaryTree.jpg)
+![TREES (5)](https://user-images.githubusercontent.com/78326110/121051510-30b9d500-c7c2-11eb-8227-73ab74a2b5a5.jpg)
+
 
 ## Binay Search Tree ~
 
