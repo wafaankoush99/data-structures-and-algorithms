@@ -127,7 +127,6 @@ class BinaryTree {
 // console.log(treeify.asTree(tree, true));
 
 // // console.log(tree.findMaximumValue());
-// console.log([2, 7, 5, 2, 6, 9, 5, 11, 4]);
 // console.log(tree.breadthFirst());
 
 class BinarySearchTree {
