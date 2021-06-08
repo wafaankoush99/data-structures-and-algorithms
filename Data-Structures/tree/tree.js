@@ -9,7 +9,6 @@ class Node {
     this.value = value;
     this.left = left;
     this.right = right;
-    this.level = [left, right];
   }
 }
 class BinaryTree {
@@ -124,6 +123,7 @@ class BinaryTree {
 // nine.left = four;
 
 // tree = new BinaryTree(two);
+// console.log(tree)
 // console.log(treeify.asTree(tree, true));
 
 // // console.log(tree.findMaximumValue());
