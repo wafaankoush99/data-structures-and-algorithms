@@ -70,7 +70,9 @@ Time:        0.965 s, estimated 1 s
 
 ***
 
-[Pull Request](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/56)
+[Pull Request 1](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/56)
+[Pull Request 2](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/57)
+
 
 
 
