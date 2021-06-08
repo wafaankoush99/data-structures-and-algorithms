@@ -73,28 +73,44 @@ function fizzBuzzTree(tree) {
 
 
 
-let tree = new Tree();
+// let tree = new Tree();
 
-let root1 = new Node(35);
-tree.root = root1;
-root1.children[0] = new Node(77);
-root1.children[1] = new Node(35);
-root1.children[2] = new Node(24);
+// let root1 = new Node(35);
+// tree.root = root1;
+// root1.children[0] = new Node(77);
+// root1.children[1] = new Node(35);
+// root1.children[2] = new Node(24);
 
-root1.children[0].children[0] = new Node(574);
-root1.children[0].children[1] = new Node(13);
-root1.children[0].children[2] = new Node(19);
+// root1.children[0].children[0] = new Node(574);
+// root1.children[0].children[1] = new Node(13);
+// root1.children[0].children[2] = new Node(19);
 
-root1.children[1].children[0] = new Node(235);
-root1.children[1].children[1] = new Node(569);
-root1.children[1].children[2] = new Node(16);
+// root1.children[1].children[0] = new Node(235);
+// root1.children[1].children[1] = new Node(569);
+// root1.children[1].children[2] = new Node(16);
 
 
-root1.children[2].children[0] = new Node(147);
-root1.children[2].children[1] = new Node(135);
-root1.children[2].children[2] = new Node(30);
+// root1.children[2].children[0] = new Node(147);
+// root1.children[2].children[1] = new Node(135);
+// root1.children[2].children[2] = new Node(30);
 
-root1.children[2].children[2].children[0] = new Node(35);
+// root1.children[2].children[2].children[0] = new Node(35);
 
-console.log(fizzBuzzTree(tree).breadth());
+// [
+//   'Buzz', '77',
+//   'Buzz', 'Fizz',
+//   '574', '13',
+//   '19', 'Buzz',
+//   '569', '16',
+//   'Fizz', 'FizzBuzz',
+//   'FizzBuzz', 'Buzz'
+// ];
+
+// console.log(fizzBuzzTree(tree).breadth());
+
+module.exports = {
+  Node: Node,
+  Tree: Tree,
+  fizzBuzzTree: fizzBuzzTree
+};
 
