@@ -29,7 +29,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | 4 | [FIFO Animal Shelter](./Data-Structures/fifoAnimalShelter) |
 | 5 | [Multi Brackets Valifation](./Data-Structures/multiBracketValidation) |
 | 6 | [Tree](./Data-Structures/tree) |
-| 7 | [Tree](./Data-Structures/fizzBuzzTree) |
+| 7 | [Fizz Buzz Tree](./Data-Structures/fizzBuzzTree) |
 
 
 
