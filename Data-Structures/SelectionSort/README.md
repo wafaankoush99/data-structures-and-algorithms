@@ -61,12 +61,16 @@ Snapshots:   0 total
 ## [Board](https://miro.com/welcomeonboard/aDRqZjExdFU5cUI2ME5pRlNCb25mU2xvVEFDN3laOTVqOGk1TWFaRWt3eW5ZSjdvbzJjVVg1SmMxQkVrNWI3T3wzMDc0NDU3MzU3MzU4Mjc2Mjk1)
 
 
+![Untitled (17)](https://user-images.githubusercontent.com/78326110/122688485-130a5800-d225-11eb-9d87-8184c72d62f0.jpg)
 
+## Blog 
 
+## [Blog](./blog.md)
+![Untitled (18)](https://user-images.githubusercontent.com/78326110/122688532-6c728700-d225-11eb-91b8-e148ff511a5a.jpg)
 
 ***
 
-[Pull Request 1](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/56)
+[Pull Request 1](https://github.com/wafaankoush99/data-structures-and-algorithms/pull/58)
 
 
 
