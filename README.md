@@ -30,6 +30,8 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | 5 | [Multi Brackets Valifation](./Data-Structures/multiBracketValidation) |
 | 6 | [Tree](./Data-Structures/tree) |
 | 7 | [Fizz Buzz Tree](./Data-Structures/fizzBuzzTree) |
+| 8 | [Selection Sort Array](./Data-Structures/SelectionSort) |
+| 9 | [Merge Sort Array](./Data-Structures/mergeSort) |
 
 
 
