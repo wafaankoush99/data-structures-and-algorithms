@@ -79,7 +79,8 @@ Time:        1.085 s
 ## Blog 
 
 ## [Blog](./blog.md)
-![Untitled (18)](./blog.jpg)
+![quick sort](https://user-images.githubusercontent.com/78326110/123209658-9a77f580-d4c9-11eb-9f7a-6ab9ad6ff755.jpg)
+
 
 ***
 
