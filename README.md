@@ -34,6 +34,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | 9 | [Merge Sort Array](./Data-Structures/mergeSort) |
 | 10 | [Quick Sort Array](./Data-Structures/quickSort) |
 | 11 | [Hash Table ](./Data-Structures/hashTable) |
+| 11 | [Repeated Word ](./Data-Structures/hashTable/reapeated-word) |
 
 
 
