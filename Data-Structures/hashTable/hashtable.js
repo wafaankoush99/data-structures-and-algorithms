@@ -49,45 +49,47 @@ class HashTable {
     }
 
 
-set(key, value) {
-    let hash = this.hash(key);
+    set(key, value) {
+        let hash = this.hash(key);
 
-    if (!this.table[hash]) {
-        this.table[hash] = new LinkedList();
-    }
-    this.table[hash].add({ [key]: value });
-}
-
-
-get(key) {
-    let arr = [];
-    const hashed = this.hash(key);
-    if (this.table[hashed]) {
-        let temp = this.table[hashed].head;
-        while (temp) {
-
-            let obj = Object.values(temp.value);
-            obj.map(item => {
-                arr.push(item);
-            });
-            temp = temp.next;
+        if (!this.table[hash]) {
+            this.table[hash] = new LinkedList();
         }
-        return arr;
-    } else {
-        return null;
+        this.table[hash].add({ [key]: value });
     }
 
-}
 
-contains(key) {
-    let hashed = this.hash(key);
-    if (this.table[hashed]) {
-        return true;
-    } else {
-        return null;
+    get(key) {
+        let arr = [];
+        const hashed = this.hash(key);
+        if (this.table[hashed]) {
+            let temp = this.table[hashed].head;
+            while (temp) {
+
+                let obj = Object.values(temp.value);
+                obj.map(item => {
+                    arr.push(item);
+                });
+                temp = temp.next;
+            }
+            return arr;
+        } else {
+            return null;
+        }
+
+    }
+
+    contains(key) {
+        let hashed = this.hash(key);
+        if (this.table[hashed]) {
+            return true;
+        } else {
+            return null;
+        }
     }
 }
-}
+
+
 
 
 let myhash = new HashTable(1021);
@@ -117,4 +119,7 @@ myhash.set('Ovi', 'Student');
 // });
 
 
-module.exports = HashTable;
+
+module.exports = {
+    HashTable: HashTable,
+};

@@ -1,6 +1,7 @@
 'use strict';
-
-const HashTable = require('./hashtable.js');
+const { HashTable } = require('./hashtable');
+const { hashmap } = require('./hashtable');
+// const { LinkedList } = require('./hashtable');
 const { expect } = require('@jest/globals');
 
 describe('Hash Tables', () => {
@@ -58,3 +59,4 @@ describe('Hash Tables', () => {
     });
 
 });
+
