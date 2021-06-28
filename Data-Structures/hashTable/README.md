@@ -101,7 +101,8 @@ Time:        1.09 s
 
 ## [Board](https://miro.com/welcomeonboard/REZ1MG9Uc3dFdW13elZER0tUSEk2STl6d1JBaWc0U0IyT0Q1cjFxQU8xNW5WODVWSWsyczBZckcyb0ZkR1RuRnwzMDc0NDU3MzU3MzU4Mjc2Mjk1)
 
-![](./hash.jpg)
+![Hash Table](https://user-images.githubusercontent.com/78326110/123594193-19399f00-d7f8-11eb-9053-cf09c043f1ee.jpg)
+
 
 
 
