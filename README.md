@@ -36,6 +36,10 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | 11 | [Hash Table ](./Data-Structures/hashTable) |
 | 12 | [Repeated Word ](./Data-Structures/hashTable/reapeated-word) |
 | 13 | [Tree Intersection](./Data-Structures/tree-intersection) |
+| 14 | [Left Join](./Data-Structures/leftJoin) |
+
+
+
 
 
 
